@@ -1,0 +1,9 @@
+{
+  "venvPath": ".pixi/envs",
+  "venv": "default",
+  "pythonVersion": "3.15",
+  "analysis": {
+    "autoSearchPaths": true,
+    "useLibraryCodeForTypes": true
+  }
+}
