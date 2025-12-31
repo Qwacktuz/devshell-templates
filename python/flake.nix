@@ -15,9 +15,9 @@
           pixi
           # uv
 
-          # LSPs
-          basedpyright # better pyright
-          ruff # linter
+          # LSPs (configured in pixi)
+          # basedpyright # better pyright
+          # ruff # linter
         ];
 
         shellHook = ''
