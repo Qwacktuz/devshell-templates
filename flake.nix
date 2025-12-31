@@ -10,13 +10,18 @@
     {
       templates = {
         # How to start developing from a template:
+
+        # First command is preferred
+        # nix flake init -t devshells#python
         # nix flake init -t github:qwacktuz/devhell-templates#python
 
-        # Create the envrc
+        # Create the envrc (if needed)
         # echo "use flake" > .envrc
+
+        # Will also run nix develop under the hood
         # direnv allow
 
-        # Handy commands
+        # Other handy commands
         # direnv reload
 
         node = {
