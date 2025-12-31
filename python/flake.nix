@@ -21,7 +21,14 @@
         ];
 
         shellHook = ''
-          # Autoinstall if existing p
+          if grep -q 'name = "new-project"' pixi.toml; then
+            current_dir_name=$(basename "$PWD")
+            sed -i.bak "s/name = \"new-project\"/name = \"$current_dir_name\"/" pixi.toml
+            rm pixi.toml.bak
+            echo "Renamed project in pixi.toml to: $current_dir_name"
+          fi
+
+          # Autoinstall 
           if [ -f pixi.toml ]; then 
             pixi install > /dev/null 2>&1;
           fi
